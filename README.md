@@ -6,8 +6,6 @@
 
 <br />
 
-![RTHMS Cover Image](https://via.placeholder.com/1200x400.png?text=RTHMS+-+Edge+AI+Track+Monitoring)
-
 ## 📖 Project Overview
 The **Railway Track Health Monitoring System (RTHMS)** is an advanced, conceptual Edge AI computer vision application. Designed to be mounted directly on the trailing bogie (last coach) of a train, this system provides real-time, autonomous scanning of railway tracks. 
 
@@ -29,7 +27,7 @@ This repository hosts the software simulation pipeline used to test and validate
 
 Standard HSV color thresholding often fails in railway environments due to the visual "noise" of gravel ballast, dirt, and rusted tie plates sharing similar color profiles. To solve this, our algorithm uses **Coordinate Region of Interest (ROI) Masking** combined with targeted **Grayscale Thresholding**.
 
-### Algorithm Breakdown (`rthms_scanner_v5.py`):
+### Algorithm Breakdown (`rthms_scanner.py`):
 1.  **Image Pre-processing:** Captures the raw camera feed and standardizes the resolution for dashboard viewing.
 2.  **Structural Edge Detection:** Converts the feed to grayscale, applies a Gaussian Blur to suppress gravel noise, and utilizes Canny Edge Detection to highlight physical rail boundaries.
 3.  **Polygonal ROI Masking:** Defines a precise coordinate polygon over the target rail, forcing the AI to completely ignore the surrounding track bed and ballast.
